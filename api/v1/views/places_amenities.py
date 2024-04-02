@@ -35,9 +35,9 @@ def Myget_place2_amenities(place_id):
 
 @app_views.route('/places/<place_id>/amenities/<amenity_id>',
                  methods=['DELETE'], strict_slashes=False)
-@swag_from('documentation/place_amenity/delete_place_amenities.yml',
+@swag_from('documentation/place_amenity/Mydelete_place2_amenities.yml',
            methods=['DELETE'])
-def delete_place_amenity(place_id, amenity_id):
+def Mydelete_place2_amenity(place_id, amenity_id):
     """
     Deletes the Object
     """

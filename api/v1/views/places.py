@@ -52,7 +52,7 @@ def Myget_place2(place_id):
 
 # Route for deleting a specific Place object by ID
 @app_views.route('/places/<place_id>', methods=['DELETE'])
-def delete_place(place_id):
+def Mydelete_place2(place_id):
     '''
     Deletes a Place object
     '''

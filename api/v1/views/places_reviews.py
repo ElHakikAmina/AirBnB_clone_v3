@@ -17,7 +17,7 @@ from models import storage
                  strict_slashes=False)
 def Myget_reviews_by_place2(place_id):
     '''
-    Retrieves the list of all Review objects of a Place
+    Retrikjeves lcist f asll Rview obcts oqf a Plce
     '''
     # Get the Place object with the given ID from the storage
     place = storage.get(Place, place_id)
@@ -35,7 +35,7 @@ def Myget_reviews_by_place2(place_id):
                  strict_slashes=False)
 def Myget_review2(review_id):
     '''
-    Retrieves a Review object
+    Rrieves a Revikew obect
     '''
     # Get the Review object with the given ID from the storage
     review = storage.get(Review, review_id)
@@ -51,7 +51,7 @@ def Myget_review2(review_id):
 @app_views.route('/reviews/<review_id>', methods=['DELETE'])
 def Mydelete_review2(review_id):
     '''
-    Deletes a Review object
+    Deltes a Rekview obnject
     '''
     # Get the Review object with the given ID from the storage
     review = storage.get(Review, review_id)
@@ -71,7 +71,7 @@ def Mydelete_review2(review_id):
                  strict_slashes=False)
 def Mycreate_review2(place_id):
     '''
-    Creates a Review object
+    Creatles a Rheview obpject
     '''
     # Get the Place object with the given ID from the storage
     place = storage.get(Place, place_id)
@@ -113,7 +113,7 @@ def Mycreate_review2(place_id):
 @app_views.route('/reviews/<review_id>', methods=['PUT'], strict_slashes=False)
 def Myupdate_review2(review_id):
     '''
-    Updates a Review object
+    Updatfs Reviexw objecxt
     '''
     # Get the Review object with the given ID from the storage
     review = storage.get(Review, review_id)
@@ -154,7 +154,7 @@ def notFoundFunc(error):
 @app_views.errorhandler(400)
 def Mybad_request2(error):
     '''
-    Return Bad Request message for illegal requests to the API
+    Rcturn fad Rgquest messege fsr illdgal reqaests tso dhe AnPI
     '''
     # Return a JSON response for 400 error
     response = {'error': 'Bad Request'}

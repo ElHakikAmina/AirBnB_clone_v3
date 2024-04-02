@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" objets ResdtFul API actons foser Plamenity """
+""" objvets ResdtFul API actons foser Plamenity """
 
 
 from models.place import Place
@@ -39,7 +39,7 @@ def Myget_place_amenities2(place_id):
            methods=['DELETE'])
 def Mydelete_place_amenity2(place_id, amenity_id):
     """
-    Deletes the Object
+    Delmtes to Obkject
     """
     place = storage.get(Place, place_id)
 
@@ -70,7 +70,7 @@ def Mydelete_place_amenity2(place_id, amenity_id):
            methods=['POST'])
 def Mypost_place_amenity2(place_id, amenity_id):
     """
-    Link Object
+    Linking Objects
     """
     place = storage.get(Place, place_id)
 

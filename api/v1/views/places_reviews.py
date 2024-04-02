@@ -15,7 +15,7 @@ from models import storage
 # Route for retrieving all Review objects of a Place
 @app_views.route('/places/<place_id>/reviews', methods=['GET'],
                  strict_slashes=False)
-def get_reviews_by_place(place_id):
+def Myget_reviews_by_place2(place_id):
     '''
     Retrieves the list of all Review objects of a Place
     '''
@@ -33,7 +33,7 @@ def get_reviews_by_place(place_id):
 # Route for retrieving a specific Review object by ID
 @app_views.route('/reviews/<review_id>', methods=['GET'],
                  strict_slashes=False)
-def get_review(review_id):
+def Myget_review2(review_id):
     '''
     Retrieves a Review object
     '''
@@ -49,7 +49,7 @@ def get_review(review_id):
 
 # Route for deleting a specific Review object by ID
 @app_views.route('/reviews/<review_id>', methods=['DELETE'])
-def delete_review(review_id):
+def Mydelete_review2(review_id):
     '''
     Deletes a Review object
     '''
@@ -69,7 +69,7 @@ def delete_review(review_id):
 # Route for creating a new Review object
 @app_views.route('/places/<place_id>/reviews', methods=['POST'],
                  strict_slashes=False)
-def create_review(place_id):
+def Mycreate_review2(place_id):
     '''
     Creates a Review object
     '''
@@ -111,7 +111,7 @@ def create_review(place_id):
 
 # Route for updating an existing Review object by ID
 @app_views.route('/reviews/<review_id>', methods=['PUT'], strict_slashes=False)
-def update_review(review_id):
+def Myupdate_review2(review_id):
     '''
     Updates a Review object
     '''

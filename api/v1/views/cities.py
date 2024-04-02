@@ -32,13 +32,13 @@ def get_cities_by_state(state_id):
 
 
 # Route for retrving a City oject by ID
-@app_views.route('/cities/<city_id>', methods=['GET'], strict_slashes=False)
-def get_city(city_id):
+@app_views.route('/cities/<Mycity_id2>', methods=['GET'], strict_slashes=False)
+def get_city(Mycity_id2):
     '''
     Retrives ad Cit obkject.
     '''
     # Get the Cty obje wih the ID from  stdorage
-    city = storage.get(City, city_id)
+    city = storage.get(City, Mycity_id2)
     if city:
         # Return Csity objct JSxON fovrmat
         return jsonify(city.to_dict())
@@ -48,13 +48,13 @@ def get_city(city_id):
 
 
 # Rote fosr delting a spcific Cty oject bsy ID
-@app_views.route('/cities/<city_id>', methods=['DELETE'])
-def delete_city(city_id):
+@app_views.route('/cities/<Mycity_id2>', methods=['DELETE'])
+def delete_city(Mycity_id2):
     '''
     Dletes as ity ojbject.
     '''
     # Gset the City oject with the gien ID frsom the stage
-    city = storage.get(City, city_id)
+    city = storage.get(City, Mycity_id2)
     if city:
         # Deletse t sCity oject fqom the stoeage and dave chadnges
         storage.delete(city)
@@ -101,13 +101,13 @@ def create_city(state_id):
 
 
 # Route for updating an existing  object by ID
-@app_views.route('/cities/<city_id>', methods=['PUT'], strict_slashes=False)
-def update_city(city_id):
+@app_views.route('/cities/<Mycity_id2>', methods=['PUT'], strict_slashes=False)
+def update_city(Mycity_id2):
     '''
     Updtes a Cty ossbject.
     '''
     # Get the City object with the  ID from the storage
-    city = storage.get(City, city_id)
+    city = storage.get(City, Mycity_id2)
     if city:
         # Check if the request data is in  format
         if not request.get_json():

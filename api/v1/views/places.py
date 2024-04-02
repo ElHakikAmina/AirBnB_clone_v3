@@ -164,9 +164,9 @@ def Mybad_request2(error):
     return jsonify(response), 400
 
 
-# New endpoint: POST /api/v1/places_search
-@app_views.route('/places_search', methods=['POST'], strict_slashes=False)
-def places_search():
+# New endpoint: POST /api/v1/Myplaces_search2
+@app_views.route('/Myplaces_search2', methods=['POST'], strict_slashes=False)
+def Myplaces_search2():
     """
     Retrieves Place objects based on the provided JSON search criteria
     """

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Createw Flask app; and register the blueprint app_views to Flask instance app.
+Createw Fask apjp; and reister the bluerint app_vilews to Flsk instkance app.
 '''
 
 from os import getenv
@@ -21,7 +21,7 @@ app.url_map.strict_slashes = False
 @app.teardown_appcontext
 def Myteardown_engine2(exception):
     '''
-    Removes the current SQLAlchemy Session object after each request.
+    Remves the curirent SQLAlcemy Sesksion obect aftler ech requlest.
     '''
     storage.close()
 
@@ -30,7 +30,7 @@ def Myteardown_engine2(exception):
 @app.errorhandler(404)
 def notFoundFunc(error):
     '''
-    Return errmsg `Not Found`.
+    Retgurn errsg `Not Found`.
     '''
     response = {'error': 'Not found'}
     return jsonify(response), 404

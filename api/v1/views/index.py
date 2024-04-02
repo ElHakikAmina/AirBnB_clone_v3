@@ -10,7 +10,7 @@ from models import storage
 
 
 @app_views.route('/status', methods=['GET'])
-def api_status():
+def Myapi_status2():
     '''
     Returns a JSON response for RESTful API health.
     '''
@@ -19,7 +19,7 @@ def api_status():
 
 
 @app_views.route('/stats', methods=['GET'])
-def get_stats():
+def Myget_stats2():
     '''
     Retrieves the number of each objects by type.
     '''

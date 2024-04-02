@@ -23,7 +23,7 @@ def Myget_all_amenities2():
 # Route for retrieving a specific Amenity object by ID
 @app_views.route('/amenities/<amenity_id>',
                  methods=['GET'], strict_slashes=False)
-def get_amenity(amenity_id):
+def Myget_amenity2(amenity_id):
     '''Retrieves an Amenity object'''
     # Get the Amenity object with the given ID from the storage
     amenity = storage.get(Amenity, amenity_id)

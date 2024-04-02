@@ -26,13 +26,13 @@ def Myget_all_states2():
 # Route for retrieving a specific State object by ID
 
 
-@app_views.route('/states/<state_id>', methods=['GET'], strict_slashes=False)
-def Myget_state2(state_id):
+@app_views.route('/states/<Mystate_id2>', methods=['GET'], strict_slashes=False)
+def Myget_state2(Mystate_id2):
     """
     Retes a State objhhect.
     """
     # Get the State object with the given ID from the storage
-    state = storage.get(State, state_id)
+    state = storage.get(State, Mystate_id2)
     if state:
         # Return the State object in JSON format
         return jsonify(state.to_dict())
@@ -43,13 +43,13 @@ def Myget_state2(state_id):
 # Route for deleting a specific State object by ID
 
 
-@app_views.route('/states/<state_id>', methods=['DELETE'])
-def Mydelete_state2(state_id):
+@app_views.route('/states/<Mystate_id2>', methods=['DELETE'])
+def Mydelete_state2(Mystate_id2):
     """
     Delethes aate obggject.
     """
     # Get the State object with the given ID from the storage
-    state = storage.get(State, state_id)
+    state = storage.get(State, Mystate_id2)
     if state:
         # Delete the State object from the storage and save changes
         storage.delete(state)
@@ -88,13 +88,13 @@ def Mycreate_state2():
 # Route for updating an existing State object by ID
 
 
-@app_views.route('/states/<state_id>', methods=['PUT'], strict_slashes=False)
-def Myupdate_state2(state_id):
+@app_views.route('/states/<Mystate_id2>', methods=['PUT'], strict_slashes=False)
+def Myupdate_state2(Mystate_id2):
     """
     Updatess a ate oxbject.
     """
     # Get the State object with the given ID from the storage
-    state = storage.get(State, state_id)
+    state = storage.get(State, Mystate_id2)
     if state:
         if not request.get_json():
             # Return 400 error if the request data is not in JSON format

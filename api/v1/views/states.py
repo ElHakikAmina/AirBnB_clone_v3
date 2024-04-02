@@ -44,7 +44,7 @@ def Myget_state2(state_id):
 
 
 @app_views.route('/states/<state_id>', methods=['DELETE'])
-def delete_state(state_id):
+def Mydelete_state2(state_id):
     """
     Deletes a State object.
     """
@@ -64,7 +64,7 @@ def delete_state(state_id):
 
 
 @app_views.route('/states', methods=['POST'], strict_slashes=False)
-def create_state():
+def Mycreate_state2():
     """
     Creates a State object.
     """
@@ -89,7 +89,7 @@ def create_state():
 
 
 @app_views.route('/states/<state_id>', methods=['PUT'], strict_slashes=False)
-def update_state(state_id):
+def Myupdate_state2(state_id):
     """
     Updates a State object.
     """

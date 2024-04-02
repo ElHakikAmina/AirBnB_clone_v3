@@ -12,7 +12,7 @@ from models import storage
 
 # Route for retrieving all Amenity objects
 @app_views.route('/amenities', methods=['GET'], strict_slashes=False)
-def get_all_amenities():
+def Myget_all_amenities2():
     '''Retrieves the list of all Amenity objects'''
     # Get all Amenity objects from the storage
     amenities = storage.all(Amenity).values()

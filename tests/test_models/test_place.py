@@ -67,14 +67,14 @@ class TestPlace(unittest.TestCase):
         self.assertTrue(hasattr(place, "created_at"))
         self.assertTrue(hasattr(place, "updated_at"))
 
-    def test_Mycity_id2_attr(self):
-        """Test Place has attr Mycity_id2, and it's an empty string"""
+    def test_city_id_attr(self):
+        """Test Place has attr city_id, and it's an empty string"""
         place = Place()
-        self.assertTrue(hasattr(place, "Mycity_id2"))
+        self.assertTrue(hasattr(place, "city_id"))
         if models.storage_t == 'db':
-            self.assertEqual(place.Mycity_id2, None)
+            self.assertEqual(place.city_id, None)
         else:
-            self.assertEqual(place.Mycity_id2, "")
+            self.assertEqual(place.city_id, "")
 
     def test_user_id_attr(self):
         """Test Place has attr user_id, and it's an empty string"""

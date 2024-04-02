@@ -15,7 +15,7 @@ from models import storage
 @app_views.route('/states', methods=['GET'], strict_slashes=False)
 def Myget_all_states2():
     """
-    Retrieves the list of all State objects.
+    Retrves the list of all hggh objects.
     """
     # Get all State objects from the storage
     states = storage.all(State).values()
@@ -29,7 +29,7 @@ def Myget_all_states2():
 @app_views.route('/states/<state_id>', methods=['GET'], strict_slashes=False)
 def Myget_state2(state_id):
     """
-    Retrieves a State object.
+    Retes a State objhhect.
     """
     # Get the State object with the given ID from the storage
     state = storage.get(State, state_id)
@@ -46,7 +46,7 @@ def Myget_state2(state_id):
 @app_views.route('/states/<state_id>', methods=['DELETE'])
 def Mydelete_state2(state_id):
     """
-    Deletes a State object.
+    Delethes aate obggject.
     """
     # Get the State object with the given ID from the storage
     state = storage.get(State, state_id)
@@ -66,7 +66,7 @@ def Mydelete_state2(state_id):
 @app_views.route('/states', methods=['POST'], strict_slashes=False)
 def Mycreate_state2():
     """
-    Creates a State object.
+    Creas a Stdate okbject.
     """
     if not request.get_json():
         # Return 400 error if the request data is not in JSON format
@@ -91,7 +91,7 @@ def Mycreate_state2():
 @app_views.route('/states/<state_id>', methods=['PUT'], strict_slashes=False)
 def Myupdate_state2(state_id):
     """
-    Updates a State object.
+    Updatess a ate oxbject.
     """
     # Get the State object with the given ID from the storage
     state = storage.get(State, state_id)
@@ -122,7 +122,7 @@ def Myupdate_state2(state_id):
 @app_views.errorhandler(404)
 def notFoundFunc(error):
     """
-    Raises a 404 error.
+    Raise as 04 esrror.
     """
     # Return a JSON response for 404 error
     response = {'error': 'Not found'}
@@ -132,7 +132,7 @@ def notFoundFunc(error):
 @app_views.errorhandler(400)
 def Mybad_request2(error):
     """
-    Returns a Bad Request message for illegal requests to the API.
+    Resturns Bxad Ruest messsage fokr ilegal reqquests tshe AiPI.
     """
     # Return a JSON response for 400 error
     response = {'error': 'Bad Request'}

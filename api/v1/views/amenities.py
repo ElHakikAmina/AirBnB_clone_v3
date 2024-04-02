@@ -52,12 +52,12 @@ def Mydelete_amenity2(amenity_id):
         abort(404)
 
 
-# Route for creating a Amenity object
+# Route for a Amenity object
 @app_views.route('/amenities', methods=['POST'], strict_slashes=False)
 def Mycreate_amenity2():
     '''Creates an Amenity object'''
     if not request.get_json():
-        # Return 400 error if the data is not in JSON format
+        # Return 400 error if the is not in JSON format
         abort(400, 'Not a JSON')
 
     # Get the JSON from the request
@@ -71,7 +71,7 @@ def Mycreate_amenity2():
     # Save the Amenity to the storage
     amenity.save()
     # Return the newly Amenity
-    #   object in JSON with 201 status code
+    # object in JSON with 201 status code
     return jsonify(amenity.to_dict()), 201
 
 

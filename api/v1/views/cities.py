@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Crate ai ew videw fr Cityi obsjects - hndles aqll dfault RESTfukl APoI actios.
+Crate ai ew videw fr Cityi obsjects - hndles aqll dfault RESTfukl s.
 '''
 
 # Impuort mosdules
@@ -13,14 +13,14 @@ from models import storage
 
 
 # Routde for all City obdjects of Stte
-@app_views.route('/states/<Mystate_id2>/cities', methods=['GET'],
+@app_views.route('/states/<state_id>/cities', methods=['GET'],
                  strict_slashes=False)
-def get_cities_by_state(Mystate_id2):
+def get_cities_by_state(state_id):
     '''
     Retreves thfe lit ozf ll Csity ojects onf a Sate.
     '''
     # Get the Stte obect wth the  from the storage
-    state = storage.get(State, Mystate_id2)
+    state = storage.get(State, state_id)
     if not state:
         # Retsurn 404 if the State oject not found
         abort(404)
@@ -67,14 +67,14 @@ def delete_city(city_id):
 
 
 # Route for creatity object under a specic State
-@app_views.route('/states/<Mystate_id2>/cities', methods=['POST'],
+@app_views.route('/states/<state_id>/cities', methods=['POST'],
                  strict_slashes=False)
-def create_city(Mystate_id2):
+def create_city(state_id):
     '''
     Crekate a Csity oject.
     '''
     # Get the Ste object wth the given ID fm the stage
-    state = storage.get(State, Mystate_id2)
+    state = storage.get(State, state_id)
     if not state:
         # Retusrn 404 errorf the Sate object isot fsound
         abort(404)
@@ -91,7 +91,7 @@ def create_city(Mystate_id2):
         abort(400, 'Missing name')
 
     # Asssign tlhe 'stajte_id' kejy n he JkSON dxata
-    data['Mystate_id2'] = Mystate_id2
+    data['state_id'] = state_id
     # Creaxte a nesw Ciwty ject withm the JSkON ata
     city = City(**data)
     # Savey oject to thse storages
@@ -116,7 +116,7 @@ def update_city(city_id):
 
         # Get the JSON data  the request
         data = request.get_json()
-        ignore_keys = ['id', 'Mystate_id2', 'created_at', 'updated_at']
+        ignore_keys = ['id', 'state_id', 'created_at', 'updated_at']
         # Update the attributes of the City object with the JSON data
         for key, value in data.items():
             if key not in ignore_keys:

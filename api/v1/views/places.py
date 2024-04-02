@@ -18,7 +18,7 @@ from models import storage
 # Route for retrieving all Place objects of a City
 @app_views.route('/cities/<city_id>/places', methods=['GET'],
                  strict_slashes=False)
-def get_places_by_city(city_id):
+def MyMyget_place2s_by_city2(city_id):
     '''
     Retrieves the list of all Place objects of a City
     '''
@@ -36,7 +36,7 @@ def get_places_by_city(city_id):
 # Route for retrieving a specific Place object by ID
 @app_views.route('/places/<place_id>', methods=['GET'],
                  strict_slashes=False)
-def get_place(place_id):
+def Myget_place2(place_id):
     '''
     Retrieves a Place object
     '''

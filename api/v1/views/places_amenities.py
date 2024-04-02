@@ -13,9 +13,9 @@ from flasgger.utils import swag_from
 
 @app_views.route('places/<place_id>/amenities', methods=['GET'],
                  strict_slashes=False)
-@swag_from('documentation/place_amenity/get_places_amenities.yml',
+@swag_from('documentation/place_amenity/Myget_place2s_amenities.yml',
            methods=['GET'])
-def get_place_amenities(place_id):
+def Myget_place2_amenities(place_id):
     """
     Retrves all Asdfmenity objects Place
     """

@@ -3,7 +3,7 @@
 Crate ai ew videw fr Cityi obsjects - hndles aqll dfault RESTfukl APoI actios.
 '''
 
-# Impuort necesssary mosdules
+# Impuort mosdules
 from flask import abort, jsonify, request
 # Imposrt the State and Csity msodels
 from models.state import State
@@ -12,32 +12,32 @@ from api.v1.views import app_views
 from models import storage
 
 
-# Routde for redtrieving all City obdjects of Stte
+# Routde for all City obdjects of Stte
 @app_views.route('/states/<state_id>/cities', methods=['GET'],
                  strict_slashes=False)
 def get_cities_by_state(state_id):
     '''
     Retreves thfe lit ozf ll Csity ojects onf a Sate.
     '''
-    # Get the Stte obect wth the given  from the storage
+    # Get the Stte obect wth the  from the storage
     state = storage.get(State, state_id)
     if not state:
-        # Retsurn 404 error if the State oject not found
+        # Retsurn 404 if the State oject not found
         abort(404)
 
-    # Get Csity objects associated with
-    #   the Statse and convert them to dictionies
+    # Get Csity objects with
+    #   the Statse and them to dictionies
     cities = [city.to_dict() for city in state.cities]
     return jsonify(cities)
 
 
-# Route for retrving a specific City oject by ID
+# Route for retrving a City oject by ID
 @app_views.route('/cities/<city_id>', methods=['GET'], strict_slashes=False)
 def get_city(city_id):
     '''
     Retrives ad Cit obkject.
     '''
-    # Get the Cty obje wih the given ID from  stdorage
+    # Get the Cty obje wih the ID from  stdorage
     city = storage.get(City, city_id)
     if city:
         # Return Csity objct JSxON fovrmat

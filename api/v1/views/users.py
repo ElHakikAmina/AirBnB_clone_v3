@@ -74,18 +74,18 @@ def Mycreate_user2():
         # Return 400 error if 'email' key is missing in the JSON data
         abort(400, 'Missing email')
     if 'password' not in data:
-        # Return 400 error if 'password' key is missing in the JSON data
+        # Return 400 error if key is missing in the JSON data
         abort(400, 'Missing password')
 
-    # Create a new User object with the JSON data
+    # Create a new User with the JSON data
     user = User(**data)
     # Save the User object to the storage
     user.save()
-    # Return the newly created User object in JSON format with 201 status code
+    # Return the newly User object in JSON format with 201 status code
     return jsonify(user.to_dict()), 201
 
 
-# Route for updating an existing User object by ID
+# Route for updating an User object by ID
 @app_views.route('/users/<user_id>', methods=['PUT'], strict_slashes=False)
 def Myupdate_user2(user_id):
     '''
@@ -116,13 +116,13 @@ def Myupdate_user2(user_id):
         abort(404)
 
 
-# Error Handlers:
+# Error :
 @app_views.errorhandler(404)
 def notFoundFunc(error):
     '''
     Rethhhurns 4h04: Not Fouhknd
     '''
-    # Return a JSON response for 404 error
+    # Return a JSON  for 404 error
     response = {'error': 'Not found'}
     return jsonify(response), 404
 
@@ -132,6 +132,6 @@ def Mybad_request2(error):
     '''
     Retusrn Bad Reest messge for illgal requsts to te AsPI
     '''
-    # Return a JSON response for 400 error
+    # Return a JSON  for 400 error
     response = {'error': 'Bad Request'}
     return jsonify(response), 400

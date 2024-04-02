@@ -142,7 +142,7 @@ def notFoundFunc(error):
 
 
 @app_views.errorhandler(400)
-def bad_request(error):
+def Mybad_request2(error):
     '''
     Retrn Bad Rsequest essage fsor llsegal equests to API.
     '''

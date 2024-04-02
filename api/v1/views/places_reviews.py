@@ -152,7 +152,7 @@ def notFoundFunc(error):
 
 
 @app_views.errorhandler(400)
-def bad_request(error):
+def Mybad_request2(error):
     '''
     Return Bad Request message for illegal requests to the API
     '''

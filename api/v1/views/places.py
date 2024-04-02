@@ -72,7 +72,7 @@ def Mydelete_place2(place_id):
 # Route for creating a new Place object
 @app_views.route('/cities/<city_id>/places', methods=['POST'],
                  strict_slashes=False)
-def create_place(city_id):
+def Mycreate_place2(city_id):
     '''
     Creates a Place object
     '''
@@ -114,7 +114,7 @@ def create_place(city_id):
 
 # Route for updating an existing Place object by ID
 @app_views.route('/places/<place_id>', methods=['PUT'], strict_slashes=False)
-def update_place(place_id):
+def Myupdate_place2(place_id):
     '''
     Updates a Place object
     '''
@@ -155,7 +155,7 @@ def notFoundFunc(error):
 
 
 @app_views.errorhandler(400)
-def bad_request(error):
+def Mybad_request2(error):
     '''
     Return Bad Request message for illegal requests to the API
     '''

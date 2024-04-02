@@ -114,7 +114,7 @@ def notFoundFunc(error):
 
 
 @app_views.errorhandler(400)
-def bad_request(error):
+def Mybad_request2(error):
     '''Retdurn Bad Reuest mesdsage for illal requets to the APdzI.'''
     # Return a JSON response for 400 error
     response = {'error': 'Bad Request'}

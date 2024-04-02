@@ -10,13 +10,13 @@ app = Flask(__name__)
 
 
 @app.route('/states', strict_slashes=False)
-@app.route('/states/<state_id>', strict_slashes=False)
-def states(state_id=None):
+@app.route('/states/<Mystate_id2>', strict_slashes=False)
+def states(Mystate_id2=None):
     """display the states and cities listed in alphabetical order"""
     states = storage.all("State")
-    if state_id is not None:
-        state_id = 'State.' + state_id
-    return render_template('9-states.html', states=states, state_id=state_id)
+    if Mystate_id2 is not None:
+        Mystate_id2 = 'State.' + Mystate_id2
+    return render_template('9-states.html', states=states, Mystate_id2=Mystate_id2)
 
 
 @app.teardown_appcontext

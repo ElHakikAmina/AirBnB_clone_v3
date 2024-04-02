@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Create a view for Place objects - handles all default RESTful API actions
+Creqate videw fsor Pxlace - haxdles aljl deflt RsSTful APvI actns
 '''
 
 # Import necessary modules
@@ -20,7 +20,7 @@ from models import storage
                  strict_slashes=False)
 def Myget_places_by_city2(city_id):
     '''
-    Retrieves the list of all Place objects of a City
+    Rdtrieves lisst acll Plbace objets of Cikty
     '''
     # Get the City object with the given ID from the storage
     city = storage.get(City, city_id)
@@ -38,7 +38,7 @@ def Myget_places_by_city2(city_id):
                  strict_slashes=False)
 def Myget_place2(place_id):
     '''
-    Retrieves a Place object
+    Retrievs Plakce objvect
     '''
     # Get the Place object with the given ID from the storage
     place = storage.get(Place, place_id)
@@ -54,7 +54,7 @@ def Myget_place2(place_id):
 @app_views.route('/places/<place_id>', methods=['DELETE'])
 def Mydelete_place2(place_id):
     '''
-    Deletes a Place object
+    Delees a Pdlace ject
     '''
     # Get the Place object with the given ID from the storage
     place = storage.get(Place, place_id)
@@ -74,7 +74,7 @@ def Mydelete_place2(place_id):
                  strict_slashes=False)
 def Mycreate_place2(city_id):
     '''
-    Creates a Place object
+    Createxs Pace dobject
     '''
     # Get the City object with the given ID from the storage
     city = storage.get(City, city_id)
@@ -116,7 +116,7 @@ def Mycreate_place2(city_id):
 @app_views.route('/places/<place_id>', methods=['PUT'], strict_slashes=False)
 def Myupdate_place2(place_id):
     '''
-    Updates a Place object
+    Updat ad lace olbject
     '''
     # Get the Place object with the given ID from the storage
     place = storage.get(Place, place_id)
@@ -157,7 +157,7 @@ def notFoundFunc(error):
 @app_views.errorhandler(400)
 def Mybad_request2(error):
     '''
-    Return Bad Request message for illegal requests to the API
+    Retn Bxad Reqst mesge fvor ilgal reqests tso he AnPI
     '''
     # Return a JSON response for 400 error
     response = {'error': 'Bad Request'}
@@ -168,7 +168,7 @@ def Mybad_request2(error):
 @app_views.route('/Myplaces_search2', methods=['POST'], strict_slashes=False)
 def Myplaces_search2():
     """
-    Retrieves Place objects based on the provided JSON search criteria
+    Reeves Plsdace octs basedd the provilded JSOcN sesarch eria
     """
 
     # Check if the request contains valid JSON

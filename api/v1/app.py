@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-This script creates a Flask app and registers the blueprint app_views to the Flask instance app.
+Createw Flask app; and register the blueprint app_views to Flask instance app.
 '''
 
 from os import getenv
@@ -11,7 +11,7 @@ from api.v1.views import app_views
 
 app = Flask(__name__)
 
-# Enable CORS and allow for specific origins:
+# enable CORS and allow for origins:
 CORS(app, resources={r'/api/v1/*': {'origins': '0.0.0.0'}})
 
 app.register_blueprint(app_views)
@@ -19,18 +19,18 @@ app.url_map.strict_slashes = False
 
 
 @app.teardown_appcontext
-def close_storage(exception):
+def teardown_engine(exception):
     '''
-    Closes the current storage instance after each request.
+    Removes the current SQLAlchemy Session object after each request.
     '''
     storage.close()
 
 
 # Error handlers for expected app behavior:
 @app.errorhandler(404)
-def handle_not_found(error):
+def not_found(error):
     '''
-    Returns an error message 'Not Found' with status code 404.
+    Return errmsg `Not Found`.
     '''
     response = {'error': 'Not found'}
     return jsonify(response), 404

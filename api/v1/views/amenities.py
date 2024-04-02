@@ -106,7 +106,7 @@ def update_amenity(amenity_id):
 
 # Error Handlers:
 @app_views.errorhandler(404)
-def notFoundFunc(error):
+def not_found(error):
     '''Returns 404: Not Found'''
     # Return a JSON response for 404 error
     response = {'error': 'Not found'}

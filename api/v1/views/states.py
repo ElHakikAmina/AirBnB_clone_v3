@@ -120,7 +120,7 @@ def update_state(state_id):
 
 
 @app_views.errorhandler(404)
-def notFoundFunc(error):
+def not_found(error):
     """
     Raises a 404 error.
     """

@@ -118,7 +118,7 @@ def update_user(user_id):
 
 # Error Handlers:
 @app_views.errorhandler(404)
-def notFoundFunc(error):
+def not_found(error):
     '''
     Returns 404: Not Found
     '''

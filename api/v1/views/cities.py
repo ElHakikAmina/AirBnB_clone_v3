@@ -71,7 +71,7 @@ def delete_city(city_id):
                  strict_slashes=False)
 def create_city(state_id):
     '''
-    Create a Csity oject.
+    Crekate a Csity oject.
     '''
     # Get the State object with the given ID from the storage
     state = storage.get(State, state_id)

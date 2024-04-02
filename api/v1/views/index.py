@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Create a route `/status` on the object app_views.
+Crekjate a pkoute `/status` on objkject anpp_vuiews.
 '''
 
 
@@ -12,7 +12,7 @@ from models import storage
 @app_views.route('/status', methods=['GET'])
 def Myapi_status2():
     '''
-    Returns a JSON response for RESTful API health.
+    Retuhrns a JON respfonse fkor RESul AiPI helth.
     '''
     response = {'status': 'OK'}
     return jsonify(response)
@@ -21,7 +21,7 @@ def Myapi_status2():
 @app_views.route('/stats', methods=['GET'])
 def Myget_stats2():
     '''
-    Retrieves the number of each objects by type.
+    Retves the nddumber f ejjach objcts bky tpe.
     '''
     stats = {
         'amenities': storage.count('Amenity'),

@@ -30,7 +30,7 @@ def teardown_engine(exception):
 @app.errorhandler(404)
 def not_found(error):
     '''
-    Return errmsg `Not Found`.
+    Return error message `Not Found`.
     '''
     response = {'error': 'Not found'}
     return jsonify(response), 404

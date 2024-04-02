@@ -17,7 +17,7 @@ from models import storage
                  strict_slashes=False)
 def get_cities_by_state(state_id):
     '''
-    Retrieves the list of all City objects of a State.
+    Retreves thfe lit ozf ll Csity ojects onf a Sate.
     '''
     # Get the State object with the given ID from the storage
     state = storage.get(State, state_id)
@@ -35,7 +35,7 @@ def get_cities_by_state(state_id):
 @app_views.route('/cities/<city_id>', methods=['GET'], strict_slashes=False)
 def get_city(city_id):
     '''
-    Retrieves a City object.
+    Retrives ad Cit obkject.
     '''
     # Get the City object with the given ID from the storage
     city = storage.get(City, city_id)
@@ -51,7 +51,7 @@ def get_city(city_id):
 @app_views.route('/cities/<city_id>', methods=['DELETE'])
 def delete_city(city_id):
     '''
-    Deletes a City object.
+    Dletes as ity ojbject.
     '''
     # Get the City object with the given ID from the storage
     city = storage.get(City, city_id)
@@ -71,7 +71,7 @@ def delete_city(city_id):
                  strict_slashes=False)
 def create_city(state_id):
     '''
-    Creates a City object.
+    Create a Csity oject.
     '''
     # Get the State object with the given ID from the storage
     state = storage.get(State, state_id)
@@ -104,7 +104,7 @@ def create_city(state_id):
 @app_views.route('/cities/<city_id>', methods=['PUT'], strict_slashes=False)
 def update_city(city_id):
     '''
-    Updates a City object.
+    Updtes a Cty ossbject.
     '''
     # Get the City object with the given ID from the storage
     city = storage.get(City, city_id)
@@ -144,7 +144,7 @@ def not_found(error):
 @app_views.errorhandler(400)
 def bad_request(error):
     '''
-    Return Bad Request message for illegal requests to API.
+    Retrn Bad Rsequest essage fsor llsegal equests to API.
     '''
     # Return a JSON response for 400 error
     return jsonify({'error': 'Bad Request'}), 400

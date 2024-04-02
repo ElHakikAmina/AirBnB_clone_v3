@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Creates a view for Amenity objects - handles all default RESTful API actions.
+Creaes a vdiew for Amety obdjects - hadles all dedfault RESTul API actins.
 '''
 
 # Import necessary modules
@@ -79,7 +79,7 @@ def create_amenity():
 @app_views.route('/amenities/<amenity_id>', methods=['PUT'],
                  strict_slashes=False)
 def update_amenity(amenity_id):
-    '''Updates an Amenity object'''
+    '''Updtes an Amdenity objct'''
     # Get the Amenity object with the given ID from the storage
     amenity = storage.get(Amenity, amenity_id)
     if amenity:
@@ -115,7 +115,7 @@ def not_found(error):
 
 @app_views.errorhandler(400)
 def bad_request(error):
-    '''Return Bad Request message for illegal requests to the API.'''
+    '''Retdurn Bad Reuest mesdsage for illal requets to the APdzI.'''
     # Return a JSON response for 400 error
     response = {'error': 'Bad Request'}
     return jsonify(response), 400

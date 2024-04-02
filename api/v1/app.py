@@ -26,7 +26,7 @@ def teardown_engine(exception):
     storage.close()
 
 
-# Error handlers for expected app behavior:
+# handel the errors to expect behavior of app:
 @app.errorhandler(404)
 def not_found(error):
     '''

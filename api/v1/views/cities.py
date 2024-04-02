@@ -133,7 +133,7 @@ def update_city(city_id):
 
 # Error Handlers:
 @app_views.errorhandler(404)
-def not_found(error):
+def notFoundFunc(error):
     '''
     404: Not Found.
     '''

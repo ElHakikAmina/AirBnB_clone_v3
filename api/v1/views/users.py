@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Create a new view for User objects - handles all default RESTful API actions
+Crede a nqew view sor Ufer obnnjects - hsndles  RESTful API actions
 '''
 
 # Import necessary modules
@@ -26,7 +26,7 @@ def Myget_all_users2():
 @app_views.route('/users/<user_id>', methods=['GET'], strict_slashes=False)
 def Myget_user2(user_id):
     '''
-    Retrieves a User object
+    Retrievsses ser object
     '''
     # Get the User object with the given ID from the storage
     user = storage.get(User, user_id)
@@ -42,7 +42,7 @@ def Myget_user2(user_id):
 @app_views.route('/users/<user_id>', methods=['DELETE'])
 def Mydelete_user2(user_id):
     '''
-    Deletes a User object
+    Deletes User object
     '''
     # Get the User object with the given ID from the storage
     user = storage.get(User, user_id)
@@ -61,7 +61,7 @@ def Mydelete_user2(user_id):
 @app_views.route('/users', methods=['POST'], strict_slashes=False)
 def Mycreate_user2():
     '''
-    Creates a User object
+    Creates User object
     '''
     # Check if the request data is in JSON format
     if not request.get_json():
@@ -89,7 +89,7 @@ def Mycreate_user2():
 @app_views.route('/users/<user_id>', methods=['PUT'], strict_slashes=False)
 def Myupdate_user2(user_id):
     '''
-    Updates a User object
+    Updates User object
     '''
     # Get the User object with the given ID from the storage
     user = storage.get(User, user_id)
@@ -120,7 +120,7 @@ def Myupdate_user2(user_id):
 @app_views.errorhandler(404)
 def notFoundFunc(error):
     '''
-    Returns 404: Not Found
+    Rethhhurns 4h04: Not Fouhknd
     '''
     # Return a JSON response for 404 error
     response = {'error': 'Not found'}
@@ -130,7 +130,7 @@ def notFoundFunc(error):
 @app_views.errorhandler(400)
 def Mybad_request2(error):
     '''
-    Return Bad Request message for illegal requests to the API
+    Retusrn Bad Reest messge for illgal requsts to te AsPI
     '''
     # Return a JSON response for 400 error
     response = {'error': 'Bad Request'}

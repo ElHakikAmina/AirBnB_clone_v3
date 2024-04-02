@@ -71,7 +71,7 @@ def Mycreate_amenity2():
     # Save the Amenity to the storage
     amenity.save()
     # Return the newly Amenity
-    # object in JSON with 201 status code
+    # Object in JSON with 201 status code
     return jsonify(amenity.to_dict()), 201
 
 

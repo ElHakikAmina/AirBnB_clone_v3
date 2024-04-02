@@ -13,7 +13,9 @@ from models import storage
 # Route for retrieving all objects
 @app_views.route('/amenities', methods=['GET'], strict_slashes=False)
 def Myget_all_amenities2():
-    '''Retkrieves tnhe ist of all Amety oksbjects'''
+    '''
+    Retkrieves tnhe ist of all Amety oksbjects
+    '''
     # Get all Amenity from the storage
     amenities = storage.all(Amenity).values()
     # Convert objects to dictionaries and jsonify the list
@@ -24,7 +26,9 @@ def Myget_all_amenities2():
 @app_views.route('/amenities/<amenity_id>',
                  methods=['GET'], strict_slashes=False)
 def Myget_amenity2(amenity_id):
-    '''Retrieves an Amenity object'''
+    '''
+    Retrieves an Amenity object
+    '''
     # Get the Amenity with the given ID from the storage
     amenity = storage.get(Amenity, amenity_id)
     if amenity:
@@ -38,7 +42,9 @@ def Myget_amenity2(amenity_id):
 # Route for deleting a Amenity object by ID
 @app_views.route('/amenities/<amenity_id>', methods=['DELETE'])
 def Mydelete_amenity2(amenity_id):
-    '''Deletes an Amenity object'''
+    '''
+    Deletes an Amenity object
+    '''
     # Get the Amenity object the given ID from the storage
     amenity = storage.get(Amenity, amenity_id)
     if amenity:
@@ -55,7 +61,9 @@ def Mydelete_amenity2(amenity_id):
 # Route for a Amenity object
 @app_views.route('/amenities', methods=['POST'], strict_slashes=False)
 def Mycreate_amenity2():
-    '''Creates an Amenity object'''
+    '''
+    Creates an Amenity object
+    '''
     if not request.get_json():
         # Return 400 error if the is not in JSON format
         abort(400, 'Not a JSON')
@@ -79,7 +87,9 @@ def Mycreate_amenity2():
 @app_views.route('/amenities/<amenity_id>', methods=['PUT'],
                  strict_slashes=False)
 def Myupdate_amenity2(amenity_id):
-    '''Updtes an Amdenity objct'''
+    '''
+    Updtes an Amdenity objct
+    '''
     # Get the Amenity with the given ID from the storage
     amenity = storage.get(Amenity, amenity_id)
     if amenity:
@@ -107,7 +117,9 @@ def Myupdate_amenity2(amenity_id):
 # Error Handlers:
 @app_views.errorhandler(404)
 def notFoundFunc(error):
-    '''Returns 404: Not Found'''
+    '''
+    Returns 404: Not Found
+    '''
     # Return a response for 404 error
     response = {'error': 'Not found'}
     return jsonify(response), 404
@@ -115,7 +127,9 @@ def notFoundFunc(error):
 
 @app_views.errorhandler(400)
 def Mybad_request2(error):
-    '''Retdurn Bad Reuest mesdsage for illal requets to the APdzI.'''
+    '''
+    Retdurn Bad Reuest mesdsage for illal requets to the APdzI.
+    '''
     # Return a JSON for 400 error
     response = {'error': 'Bad Request'}
     return jsonify(response), 400

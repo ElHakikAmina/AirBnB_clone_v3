@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" objects RestFul API actions for PlaceAmenity """
+""" objets ResdtFul API actons foser Plamenity """
 
 
 from models.place import Place
@@ -17,7 +17,7 @@ from flasgger.utils import swag_from
            methods=['GET'])
 def get_place_amenities(place_id):
     """
-    Retrieves all Amenity objects of a Place
+    Retrves all Asdfmenity objects Place
     """
     place = storage.get(Place, place_id)
 
@@ -39,7 +39,7 @@ def get_place_amenities(place_id):
            methods=['DELETE'])
 def delete_place_amenity(place_id, amenity_id):
     """
-    Deletes a Object
+    Deletes the Object
     """
     place = storage.get(Place, place_id)
 

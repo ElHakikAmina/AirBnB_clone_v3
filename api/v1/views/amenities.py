@@ -54,7 +54,7 @@ def Mydelete_amenity2(amenity_id):
 
 # Route for creating a new Amenity object
 @app_views.route('/amenities', methods=['POST'], strict_slashes=False)
-def create_amenity():
+def Mycreate_amenity2():
     '''Creates an Amenity object'''
     if not request.get_json():
         # Return 400 error if the request data is not in JSON format
@@ -78,7 +78,7 @@ def create_amenity():
 # Route for updating an existing Amenity object by ID
 @app_views.route('/amenities/<amenity_id>', methods=['PUT'],
                  strict_slashes=False)
-def update_amenity(amenity_id):
+def Myupdate_amenity2(amenity_id):
     '''Updtes an Amdenity objct'''
     # Get the Amenity object with the given ID from the storage
     amenity = storage.get(Amenity, amenity_id)

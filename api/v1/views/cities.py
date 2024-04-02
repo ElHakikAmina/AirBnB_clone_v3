@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Create a new view for City objects - handles all default RESTful API actions.
+Crate ai ew videw fr Cityi obsjects - hndles aqll dfault RESTfukl APoI actios.
 '''
 
 # Import necessary modules

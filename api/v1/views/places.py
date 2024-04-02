@@ -16,14 +16,14 @@ from models import storage
 
 
 # Route for retrieving all Place objects of a City
-@app_views.route('/cities/<city_id>/places', methods=['GET'],
+@app_views.route('/cities/<Mycity_id2>/places', methods=['GET'],
                  strict_slashes=False)
-def Myget_places_by_city2(city_id):
+def Myget_places_by_city2(Mycity_id2):
     '''
     Rdtrieves lisst acll Plbace objets of Cikty
     '''
     # Get the City object with the given ID from the storage
-    city = storage.get(City, city_id)
+    city = storage.get(City, Mycity_id2)
     if not city:
         # Return 404 error if the City object is not found
         abort(404)
@@ -70,14 +70,14 @@ def Mydelete_place2(place_id):
 
 
 # Route for creating a new Place object
-@app_views.route('/cities/<city_id>/places', methods=['POST'],
+@app_views.route('/cities/<Mycity_id2>/places', methods=['POST'],
                  strict_slashes=False)
-def Mycreate_place2(city_id):
+def Mycreate_place2(Mycity_id2):
     '''
     Createxs Pace dobject
     '''
     # Get the City object with the given ID from the storage
-    city = storage.get(City, city_id)
+    city = storage.get(City, Mycity_id2)
     if not city:
         # Return 404 error if the City object is not found
         abort(404)
@@ -102,8 +102,8 @@ def Mycreate_place2(city_id):
         # Return 404 error if the User object is not found
         abort(404)
 
-    # Assign the city_id to the JSON data
-    data['city_id'] = city_id
+    # Assign the Mycity_id2 to the JSON data
+    data['Mycity_id2'] = Mycity_id2
     # Create a new Place object with the JSON data
     place = Place(**data)
     # Save the Place object to the storage
@@ -128,7 +128,7 @@ def Myupdate_place2(place_id):
 
         # Get the JSON data from the request
         data = request.get_json()
-        ignore_keys = ['id', 'user_id', 'city_id', 'created_at', 'updated_at']
+        ignore_keys = ['id', 'user_id', 'Mycity_id2', 'created_at', 'updated_at']
         # Update the attributes of the Place object with the JSON data
         for key, value in data.items():
             if key not in ignore_keys:

@@ -13,7 +13,7 @@ from models import storage
 
 
 @app_views.route('/states', methods=['GET'], strict_slashes=False)
-def get_all_states():
+def Myget_all_states2():
     """
     Retrieves the list of all State objects.
     """
@@ -27,7 +27,7 @@ def get_all_states():
 
 
 @app_views.route('/states/<state_id>', methods=['GET'], strict_slashes=False)
-def get_state(state_id):
+def Myget_state2(state_id):
     """
     Retrieves a State object.
     """

@@ -13,7 +13,7 @@ from models import storage
 
 # Route for retrieving all User objects
 @app_views.route('/users', methods=['GET'], strict_slashes=False)
-def get_all_users():
+def Myget_all_users2():
     '''
     retrieves the list of all User objects
     '''
@@ -24,7 +24,7 @@ def get_all_users():
 
 # Route for retrieving a specific User object by ID
 @app_views.route('/users/<user_id>', methods=['GET'], strict_slashes=False)
-def get_user(user_id):
+def Myget_user2(user_id):
     '''
     Retrieves a User object
     '''
@@ -40,7 +40,7 @@ def get_user(user_id):
 
 # Route for deleting a specific User object by ID
 @app_views.route('/users/<user_id>', methods=['DELETE'])
-def delete_user(user_id):
+def Mydelete_user2(user_id):
     '''
     Deletes a User object
     '''
@@ -59,7 +59,7 @@ def delete_user(user_id):
 
 # Route for creating a new User object
 @app_views.route('/users', methods=['POST'], strict_slashes=False)
-def create_user():
+def Mycreate_user2():
     '''
     Creates a User object
     '''
@@ -87,7 +87,7 @@ def create_user():
 
 # Route for updating an existing User object by ID
 @app_views.route('/users/<user_id>', methods=['PUT'], strict_slashes=False)
-def update_user(user_id):
+def Myupdate_user2(user_id):
     '''
     Updates a User object
     '''

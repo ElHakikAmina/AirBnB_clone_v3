@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Createw Flask app; and register the blueprint app_views to Flask instance app.
+Flask app creation and registeration the blueprint app_views to Flask instance app.
 '''
 
 from os import getenv
@@ -21,7 +21,7 @@ app.url_map.strict_slashes = False
 @app.teardown_appcontext
 def teardown_engine(exception):
     '''
-    Removes the current SQLAlchemy Session object after each request.
+    After each request Removing the current SQL Alchemy Session object.
     '''
     storage.close()
 

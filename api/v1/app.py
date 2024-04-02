@@ -28,7 +28,7 @@ def teardown_engine(exception):
 
 # Error handlers for expected app behavior:
 @app.errorhandler(404)
-def not_found(error):
+def notFoundFunc(error):
     '''
     Return errmsg `Not Found`.
     '''

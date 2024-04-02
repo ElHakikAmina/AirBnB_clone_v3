@@ -19,7 +19,7 @@ app.url_map.strict_slashes = False
 
 
 @app.teardown_appcontext
-def teardown_engine(exception):
+def Myteardown_engine2(exception):
     '''
     Removes the current SQLAlchemy Session object after each request.
     '''
